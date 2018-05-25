@@ -1,0 +1,34 @@
+
+
+
+
+    <div class="jumbotron">
+      <ul>
+    
+    {{question}}
+    
+      </ul>
+    
+        <ul *ngFor="let opt of option">
+              <div class="checkbox">
+                <label>
+                 <input type="checkbox" (click)="check($event,opt)">
+               {{opt}}
+       <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+    
+       </label>
+              </div>
+            </ul>
+    
+    </div>
+  
+            <div>
+       <button (click)="previous()"*ngIf="i>0" >previous</button>
+         <button  (click)="next()" *ngIf="i<quizlength">next</button>
+    </div>
+    
+    <div align="center">
+    
+      <button class="btn btn-info" (click)="generatemark()">submit</button>
+    </div>
+    
